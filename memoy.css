@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, tahoma, sans-serif;
+}
+#end{
+    background-color: #00cd6bcc;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+#end span{
+    font-size: 2rem;
+    border: 4px solid white;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+}
+#end span:hover{
+    background-color: white;
+    color: #00cd6bcc;
+   
+    padding: 20px;
+   border-radius: 15px;
+}
+.controls{
+    background-color: #00cd6bcc;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.controls span{
+    font-size: 2rem;
+    border: 4px solid white;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.controls span:hover{
+    background-color: white;
+    color: #00cd6bcc;
+    word-spacing: 2px;
+    padding: 20px;
+    border-radius: 15px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+    padding: 10px 40px;
+    width: 1080px;
+    border: 4px solid #137ab8;
+}
+.game-blocks{
+    width: 1080px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.stop-clicking{
+    pointer-events: none;
+}
+.block{
+    height: 200px;
+    position: relative;
+    flex: 1 0 200px;
+    margin: 10px;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+
+}
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    border: 5px solid #2196F3;
+}
+
+.front{
+    background-color: #333;
+}
+
+.front:before {
+    content: '!';
+    color: #FFF;
+    font-size: 140px;
+    font-weight: bold;
+}
+.block:hover  .front:before{
+    color: #2196F3;
+}
+.back{
+    background-color: #607D8B;
+    transform: rotateY(180deg);
+}
+.back img{
+    width: 140px;
+    height: 140px;
+}
+.block.is-flipped,
+.block.has-match {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  pointer-events: none;
+}
