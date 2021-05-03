@@ -13,8 +13,9 @@ function start() {
   showAll();
 }
 let blocks = Array.from(document.querySelectorAll(".game-blocks .block"));
-
 let orderRange = [...blocks.keys()]
+
+
 shuffle(orderRange);
 blocks.forEach((block, index)=>{
 
