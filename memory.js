@@ -16,6 +16,7 @@ let blocks = Array.from(document.querySelectorAll(".game-blocks .block"));
 let orderRange = [...blocks.keys()]
 
 
+
 shuffle(orderRange);
 blocks.forEach((block, index)=>{
 
@@ -31,7 +32,6 @@ function shuffle(array) {
   let current = array.length;
   while(current > 0 ){
   random = Math.floor(Math.random()* current)
-console.log(random)
   current--
 
   temp = array[current];
@@ -118,5 +118,6 @@ function showAll() {
 function restart() {
   location.reload();
 }
+
 
 
